@@ -1,0 +1,31 @@
+/*margin, paddingを設定して好きなレイアウトにしていく*/
+
+@charset "utf-8";
+body {
+    margin: 0;
+}
+
+.header-inner {
+    font-size: 36px;
+}
+
+.header-inner .logo {
+    margin: 0 auto 0 auto;
+    text-align: center;
+}
+
+.nav-inner {
+    padding: 10px;
+    background: black;
+}
+
+.content-inner {
+
+    height: 400px;
+}
+
+.footer-inner {
+    text-align: center;
+    background: black;
+    color: white;
+}
