@@ -1,0 +1,22 @@
+{
+  "name": "tempwebpage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hatori-Shuntaro/3DGraphic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hatori-Shuntaro/3DGraphic/issues"
+  },
+  "homepage": "https://github.com/Hatori-Shuntaro/3DGraphic#readme",
+  "dependencies": {
+    "three": "^0.116.1"
+  }
+}
