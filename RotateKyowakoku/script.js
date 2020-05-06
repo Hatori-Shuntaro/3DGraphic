@@ -1,6 +1,4 @@
 function init() {
-
-    const THREE = require('three');
     
     VolumetricFire.texturePath = '../textures/';
     let clock = new THREE.Clock();
@@ -46,7 +44,7 @@ function init() {
 
     var loader = new THREE.OBJLoader();
     loader.load('Kyowakoku.obj', function (loadedMesh) {
-        var material = new THREE.MeshLambertMaterial({ color: 0x8b4513 });
+        var material = new THREE.MeshNormalMaterial();
 
         loadedMesh.children.forEach(function (child) {
             child.material = material;

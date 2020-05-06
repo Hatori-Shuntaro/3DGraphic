@@ -3,43 +3,57 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>My Graphic Page</title>
+<title>Undefined</title>
 <link red="stylesheet" href="normalize.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <div class="container">
-        <div class="header-inner">
-            <!-- ヘッダーの要素 -->
-            <div class="logo">Web Graphic Page</div>
-        </div>
-    </div>
-</header>
-<nav>
-    <div class="container">
-        <div class="nav-inner"></div>
-    </div>
-</nav>
-<main>
-    <div class="container">
-        <div class="content">
-            <div class="content-inner">
-                <!-- コンテンツの要素 -->
-                <ul>
-                    <li><a href="RotateKyowakoku/Rotate.html">Rotate Kyowakoku (Glitch and Fire Effect)</a></li>
-                </ul>
+<canvas id="background-canvas"></canvas>
+<div id="wrapper">
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <div class="menu" id="open-nav">
+                    <img src="hamburger.png" alt="menu-button">
+                </div>
+                <div class="title">3Dグラフィック置き場。</div>
             </div>
         </div>
-    </div>
-</main>
-<footer>
-    <div class="container">
-        <div class="footer-inner">
-            <!-- フッターの要素 -->
-            <div class="copyright">©Hato Shun</div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="content">
+                <div class="content-inner">
+                    <ul>
+                        <li><a href="RotateKyowakoku/Rotate.html">Rotate Kyowakoku (Glitch and Fire Effect)</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="copyright">©To R:P:</div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<nav id="nav">
+    <div class="container">
+        <div class="nav-inner">
+            <div class="menu-title">Menu</div>
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Reference</a></li>
+            </ul>
+         </div>
     </div>
-</footer>
+</nav>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="libs/three.min.js"></script>
+<script src="main.js"></script>
+<script src="drawer.js"></script>
 </body>
 </html>
