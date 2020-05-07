@@ -25,9 +25,15 @@ body {
     padding: 30px;
     text-align: center;
     flex: 1 1 auto;
-    font-size: 36px;
+    font-size: 20px;
+    font-weight: bold;
     font-family: sans-serif;
     color: white;
+}
+
+.header-inner img {
+    width: 30px;
+    height: 30px;
 }
 
 .header-inner .menu {
@@ -37,18 +43,18 @@ body {
 }
 
 .content {
-    margin: 0 20%;
+    margin: 0 10%;
     background-color: rgba(119, 119, 119, 0.3);
 }
 
 .content-inner {
-    padding: 40px;
+    padding: 10px;
     height: 1000px;
 }
 
 .content-inner ul {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 20px 20px 20px 20px;
+    padding: 0;
     color: white;
 }
 
@@ -106,4 +112,28 @@ body {
     text-align: center;
     background: black;
     color: white;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .header-inner .title {
+        font-size: 36px;
+    }
+
+    .header-inner img {
+        width: 62px;
+        height: 62px;
+    }
+
+    .content {
+        margin: 0 20%;
+    }
+
+    .content-inner {
+        padding: 20px 40px 20px 40px;
+    }
+
+    .content-inner ul {
+        font-size: 24px;
+    }
 }

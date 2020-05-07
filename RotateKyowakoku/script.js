@@ -1,6 +1,5 @@
 function init() {
     
-    VolumetricFire.texturePath = '../textures/';
     let clock = new THREE.Clock();
     let scene = new THREE.Scene();
 
@@ -36,10 +35,6 @@ function init() {
     scene.add(spotLight);
 
 
-    // let axis = new THREE.AxisHelper(50);
-    // scene.add(axis);
-
-
     let mesh;
 
     var loader = new THREE.OBJLoader();
@@ -60,23 +55,6 @@ function init() {
     });
 
 
-    let fireWidth = 100;
-    let fireHeight = 200;
-    let fireDepth = 100;
-    let sliceSpacing = 20;
-
-    let fireLeft = new VolumetricFire(
-        fireWidth,
-        fireHeight,
-        fireDepth,
-        sliceSpacing,
-        camera
-    );
-
-    scene.add(fireLeft.mesh);
-    fireLeft.mesh.position.set(0, fireHeight / 2, 0 );
-
-
     let renderPass = new THREE.RenderPass(scene, camera);
 
     let effectGlitch = new THREE.GlitchPass(64);
@@ -93,11 +71,8 @@ function init() {
         let elapsed = clock.getElapsedTime();
         let delta = clock.getDelta();
 
-        fireLeft.update(elapsed);
-
         scene.rotation.y += 0.005;
         requestAnimationFrame(render);
-        // webGLRenderer.render(scene, camera);
         composer.render(delta);
     }
 }
