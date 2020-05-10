@@ -6,24 +6,31 @@
     <title>First WebGL Project</title>
 </head>
 <body>
-    <canvas>
+    <canvas id="canvas">
         Canvas not supported
     </canvas>
     <script src="minMatrix.js"></script>
-    <script src="main.js" type="./module"></script>
-    <!-- <script id="vs" type="x-shader/x-vertex">
+    <script src="main.js"></script>
+    <script id="vs" type="x-shader/x-vertex">
         attribute vec3 position;
+        attribute vec4 color;
         uniform mat4 mvpMatrix;
+        varying vec4 vColor;
 
         void main(void) {
+            vColor = color;
             gl_Position = mvpMatrix * vec4(position, 1.0);
         }
     </script>
 
     <script id="fs" type="x-shader/x-fragment">
+        precision mediump float;
+
+        varying vec4 vColor;
+
         void main(void) {
-            gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+            gl_FragColor = vColor;
         }
-    </script> -->
+    </script>
 </body>
 </html>

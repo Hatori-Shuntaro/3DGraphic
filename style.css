@@ -1,20 +1,12 @@
 @charset "UTF-8";
+/* 全てのページに共通するスタイル */
 
 body {
     margin: 0;
 }
 
 .container {
-    background-color:rgba(236, 228, 228, 0.1);
-}
-
-#background-canvas {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    background-color: rgba(236, 228, 228, 0.1);
 }
 
 .header-inner {
@@ -31,6 +23,11 @@ body {
     color: white;
 }
 
+.header-inner a {
+    text-decoration: none;
+    color: white;
+}
+
 .header-inner img {
     width: 30px;
     height: 30px;
@@ -40,26 +37,6 @@ body {
     flex: 0 0 32px;
     align-self: center;
     margin-left: 36px;
-}
-
-.content {
-    margin: 0 10%;
-    background-color: rgba(119, 119, 119, 0.3);
-}
-
-.content-inner {
-    padding: 10px;
-    height: 1000px;
-}
-
-.content-inner ul {
-    margin: 20px 20px 20px 20px;
-    padding: 0;
-    color: white;
-}
-
-.content-inner a {
-    color: orange;
 }
 
 #nav {
@@ -115,25 +92,12 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-
+    /* 全てのページに共通するスタイル */
     .header-inner .title {
         font-size: 36px;
     }
-
     .header-inner img {
         width: 62px;
         height: 62px;
-    }
-
-    .content {
-        margin: 0 20%;
-    }
-
-    .content-inner {
-        padding: 20px 40px 20px 40px;
-    }
-
-    .content-inner ul {
-        font-size: 24px;
     }
 }
