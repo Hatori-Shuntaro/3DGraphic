@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First WebGL Project</title>
+</head>
+<body>
+    <canvas id="canvas">Canvas not supported</canvas>
+    <p><input type="checkbox", id="check" checked><label for="check">auto run</label></p>
+    <script id="fs" type="x-shader/x-fragment">
+        precision mediump float;
+        uniform float time;
+        uniform vec2  mouse;
+        uniform vec2  resolution;
+        
+        void main(void){
+            vec2 p = (gl_FragCoord.xy * 2.0 - resolution) / min(resolution.x, resolution.y);
+            vec2 color = (vec2(1.0) + p.xy) * 0.5;
+            gl_FragColor = vec4(color, 0.0, 1.0);
+        }
+    </script>
+        
+    <script id="vs" type="x-shader/x-vertex">
+        attribute vec3 position;
+        
+        void main(void){
+            gl_Position = vec4(position, 1.0);
+        }
+    </script>
+        
+    <script src="main.js" type="text/javascript"></script>
+    <style type="text/css">
+        * {
+            text-align: center;
+            margin: 10px auto;
+            padding: 0px;
+        }
+        
+        canvas {
+            box-shadow: 0px 0px 0px 1px gray;
+        }
+    </style>
+</body>
+</html>

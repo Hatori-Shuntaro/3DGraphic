@@ -12,7 +12,7 @@
 
 .content {
     margin: 0 10%;
-    background-color: rgba(119, 119, 119, 0.3);
+    background-color: rgba(71, 71, 71, 0.7);
 }
 
 .content-inner {
@@ -38,6 +38,7 @@
     /* ホーム画面のスタイル */
     .content {
         margin: 0 20%;
+        background-color: rgba(119, 119, 119, 0.3);
     }
     .content-inner {
         padding: 20px 40px 20px 40px;
